@@ -1,9 +1,17 @@
+const body = document.querySelector("body");
 const headerEl = document.getElementById("header");
 const offerDropdownEl = document.getElementById("offer-dropdown");
 const offerNavItemEl = document.getElementById("offer-nav-item");
 const searchInputEl = document.getElementById("search-input");
 const searchContainerEl = document.getElementById("search-container");
 const searchButtonEl = document.getElementById("search-button");
+const hamburgerButtonEl = document.getElementById("hamburger-button");
+const mobileMenuEl = document.getElementById("mobile-menu");
+const mobileOfferNavItemEl = document.getElementById("mobile-offer-nav-item");
+const mobileOfferDropdownEl = document.getElementById("mobile-offer-dropdown");
+const hamburgerLineOneEl = document.getElementById("hamburger-line-1");
+const hamburgerLineTwoEl = document.getElementById("hamburger-line-2");
+const hamburgerLineThreeEl = document.getElementById("hamburger-line-3");
 
 let lastScroll = 0;
 
@@ -54,6 +62,58 @@ const hideSearchInput = () => {
   searchInputEl.classList.add("invisible");
 };
 
+const toggleMobileMenu = () => {
+  if (mobileMenuEl.classList.contains("open")) {
+    //handle close
+    mobileMenuEl.classList.remove("open");
+    mobileMenuEl.classList.add("-translate-x-[100%]");
+
+    hamburgerLineOneEl.classList.remove(
+      "rotate-45",
+      "translate-x-[2px]",
+      "-translate-y-[4px]"
+    );
+    hamburgerLineTwoEl.classList.remove("!hidden");
+    hamburgerLineThreeEl.classList.remove(
+      "-rotate-45",
+      "translate-x-[2px]",
+      "translate-y-[7px]"
+    );
+
+    //enable scrolling
+    body.classList.remove("overflow-hidden");
+  } else {
+    //handle open
+    mobileMenuEl.classList.add("open");
+    mobileMenuEl.classList.remove("-translate-x-[100%]");
+
+    hamburgerLineOneEl.classList.add(
+      "rotate-45",
+      "translate-x-[2px]",
+      "-translate-y-[4px]"
+    );
+    hamburgerLineTwoEl.classList.add("!hidden");
+    hamburgerLineThreeEl.classList.add(
+      "-rotate-45",
+      "translate-x-[2px]",
+      "translate-y-[7px]"
+    );
+
+    //block scrolling
+    body.classList.add("overflow-hidden");
+  }
+};
+
+const showMobileOfferDropdown = () => {
+  mobileOfferDropdownEl.classList.remove("hidden");
+  mobileOfferDropdownEl.classList.add("flex");
+};
+
+const hideMobileOfferDropdown = () => {
+  mobileOfferDropdownEl.classList.remove("flex");
+  mobileOfferDropdownEl.classList.add("hidden");
+};
+
 export {
   toggleHeaderVisibility,
   hideOfferDropdown,
@@ -65,4 +125,11 @@ export {
   searchInputEl,
   searchButtonEl,
   searchContainerEl,
+  toggleMobileMenu,
+  hamburgerButtonEl,
+  mobileMenuEl,
+  hideMobileOfferDropdown,
+  showMobileOfferDropdown,
+  mobileOfferNavItemEl,
+  mobileOfferDropdownEl,
 };
