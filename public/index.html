@@ -4,10 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/output.css" />
-    <script defer src="/src/index.js"></script>
+    <script defer src="/src/index.js" type="module"></script>
     <title>Document</title>
   </head>
   <body>
-    <p class="text-xl bg-red-500 p-8">hello</p>
+    <header
+      class="px-4 md:px-6 lg:px-[89px] py-6 transition-all duration-500 w-[100%] flex items-center justify-between bg-white"
+      id="header"
+    >
+      <a href="#top">
+        <img src="./images/app-logo.svg" alt="giardesign logo" />
+      </a>
+      <div class="hidden lg:block">
+        <nav class="flex gap-10">
+          <ul
+            class="flex gap-10 child-hover:-translate-y-0.5 child-hover:border-b-[2px] child:px-2 child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+          >
+            <li class="relative !border-none" id="offer-nav-item">
+              <div class="hover:cursor-pointer flex items-center gap-[5px]">
+                <span>Oferta</span>
+                <img src="./images/arrow-down.svg" alt="rozwiń oferte" />
+              </div>
+              <ul
+                class="absolute top-[100%] invisible transition-all bg-white px-12 py-4 border shadow-lg rounded flex flex-col gap-4 child:px-2 child-hover:-translate-y-0.5 child-hover:border-b-[2px] child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+                id="offer-dropdown"
+              >
+                <li>
+                  <a href="#">Trawniki</a>
+                </li>
+                <li>
+                  <a href="#">Kwiaty</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#about">O firmie</a>
+            </li>
+            <li>
+              <a href="#realizations">Realizacje</a>
+            </li>
+            <li>
+              <a href="#contact">Kontakt</a>
+            </li>
+          </ul>
+          <div class="relative" id="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              id="search-input"
+              class="absolute right-0 -top-[30%] w-0 p-2 border border-gray-400 shadow-inner transition-all delay-150 duration-300 overflow-hidden rounded-lg invisible !outline-none"
+            />
+            <button
+              aria-label="przycisk szukania"
+              id="search-button"
+              class="relative right-2 top-0 cursor-pointer z-10"
+            >
+              <img src="./images/search-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>
