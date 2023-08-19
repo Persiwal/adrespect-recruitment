@@ -19,9 +19,11 @@ const toggleHeaderVisibility = () => {
   const currentScroll = window.scrollY;
 
   //Check if header is at the top of the page
-  if (currentScroll > 0) {
+  if (currentScroll > 70) {
     headerEl.classList.add("fixed");
+    headerEl.classList.remove("relative");
   } else {
+    headerEl.classList.add("relative");
     headerEl.classList.remove("fixed");
   }
 
