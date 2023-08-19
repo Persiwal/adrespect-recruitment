@@ -3,6 +3,10 @@ module.exports = {
   content: ["public/*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        monserrat: ["Montserrat"],
+        inter: ["Inter"],
+      },
       keyframes: {
         slideUp: {
           "0%": {
