@@ -14,10 +14,20 @@ import {
   showMobileOfferDropdown,
   mobileOfferNavItemEl,
   mobileOfferDropdownEl,
+  offerDropdownEl,
 } from "./components/header.js";
+import {
+  nextSlideButtonEl,
+  scrollToNextSlide,
+  scrollToPreviousSlide,
+  previousSlideButtonEl,
+} from "./components/hero.js";
+import debounce from "./helpers/debounce.js";
+
+const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 50);
 
 window.addEventListener("scroll", () => {
-  toggleHeaderVisibility();
+  debouncedToggleHeaderVisibility();
 });
 
 window.addEventListener("mouseover", (event) => {
@@ -26,8 +36,9 @@ window.addEventListener("mouseover", (event) => {
 });
 
 window.addEventListener("mouseout", (event) => {
-  if (event.target === offerNavItemEl || offerNavItemEl.contains(event.target))
-    hideOfferDropdown();
+  console.log(event.target);
+
+  if (offerNavItemEl.contains(event.target)) hideOfferDropdown();
 });
 
 window.addEventListener("click", (event) => {
@@ -72,4 +83,16 @@ window.addEventListener("click", (event) => {
     //handle click outside of mobile offer nav item container
     hideMobileOfferDropdown();
   }
+
+  //slider desktop buttons
+  if (previousSlideButtonEl.contains(event.target)) {
+    scrollToPreviousSlide();
+  }
+
+  if (nextSlideButtonEl.contains(event.target)) {
+    scrollToNextSlide();
+  }
 });
+
+//auto scroll hero slider every 3 secs
+setInterval(scrollToNextSlide, 3000);
