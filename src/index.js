@@ -24,7 +24,7 @@ import {
 } from "./components/hero.js";
 import debounce from "./helpers/debounce.js";
 
-const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 50);
+const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
