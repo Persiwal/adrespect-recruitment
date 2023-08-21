@@ -1,3 +1,4 @@
+import "./index.css";
 import selectors from "./constants/selectors/selectors.js";
 import "./components/realizations.js";
 import {
@@ -15,9 +16,6 @@ import { loadMoreImages } from "./components/realizations.js";
 import debounce from "./helpers/debounce.js";
 
 const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
-
-//initial load of gallery images
-// loadMoreImages();
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
