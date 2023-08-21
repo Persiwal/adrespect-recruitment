@@ -1,5 +1,5 @@
 const initGallery = (lightgalleryElement) => {
-  lightGallery(lightgalleryElement, {
+  const lightGalleryInstance = lightGallery(lightgalleryElement, {
     plugins: [lgZoom, lgThumbnail],
     animateThumb: false,
     zoomFromOrigin: false,
@@ -7,6 +7,12 @@ const initGallery = (lightgalleryElement) => {
     toggleThumb: true,
     controls: true,
   });
+
+  return lightGalleryInstance;
 };
 
-export default initGallery;
+const refreshGallery = (galleryInstance) => {
+  galleryInstance.refresh();
+};
+
+export { initGallery, refreshGallery };
