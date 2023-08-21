@@ -1,12 +1,12 @@
-import img2 from "../../images/img-2.png";
-import img3 from "../../images/img-2.png";
-import img4 from "../../images/img-2.png";
-import img5 from "../../images/img-2.png";
-import img6 from "../../images/img-2.png";
-import img7 from "../../images/img-2.png";
-import img8 from "../../images/img-2.png";
-import img9 from "../../images/img-2.png";
-import img10 from "../../images/img-2.png";
+import img2 from "../../assets/img-2.png";
+import img3 from "../../assets/img-2.png";
+import img4 from "../../assets/img-2.png";
+import img5 from "../../assets/img-2.png";
+import img6 from "../../assets/img-2.png";
+import img7 from "../../assets/img-2.png";
+import img8 from "../../assets/img-2.png";
+import img9 from "../../assets/img-2.png";
+import img10 from "../../assets/img-2.png";
 
 const allRealizationsGalleryImages = [
   img2,
