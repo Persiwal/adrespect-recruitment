@@ -41,7 +41,7 @@ const createRealizationsGalleryImageEl = (src, index) => {
 const addImagesToHtml = () => {
   for (let i = 0; i < imagesToLoadPerClick; i++) {
     if (loadedImages < allRealizationsGalleryImagesNames.length) {
-      const fullImgPath = `./images/${allRealizationsGalleryImagesNames[loadedImages]}`;
+      const fullImgPath = `./assets/${allRealizationsGalleryImagesNames[loadedImages]}`;
       createRealizationsGalleryImageEl(fullImgPath, loadedImages);
 
       loadedImages++;
@@ -57,13 +57,13 @@ const addImagesToHtml = () => {
 };
 
 const loadMoreImages = async () => {
-  // addImagesToHtml();
+  addImagesToHtml();
   macyInstance = createMacyImgGrid("#realizations-grid");
   refreshGallery(lightGalleryInstance);
 };
 
 const initRealizationsGrid = () => {
-  // addImagesToHtml();
+  addImagesToHtml();
   macyInstance = createMacyImgGrid("#realizations-grid");
   lightGalleryInstance = initGallery(
     selectors.realizations.realizationsGridContainerEl
