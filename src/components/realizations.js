@@ -14,8 +14,6 @@ const createRealizationsGalleryImageEl = (src, index) => {
   lightBoxContainer.classList.add("relative");
   lightBoxContainer.classList.add("group");
   lightBoxContainer.classList.add("hover:cursor-pointer");
-  lightBoxContainer.classList.add("transition-all");
-  lightBoxContainer.classList.add("transition-delay-200");
 
   const img = document.createElement("img");
   img.src = src;
