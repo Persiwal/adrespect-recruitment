@@ -1,61 +1,54 @@
+import selectors from "./constants/selectors/selectors.js";
+import "./components/realizations.js";
 import {
   toggleHeaderVisibility,
   showOfferDropdown,
   hideOfferDropdown,
-  offerNavItemEl,
   showSearchInput,
   hideSearchInput,
-  searchButtonEl,
-  searchContainerEl,
-  searchInputEl,
   toggleMobileMenu,
-  hamburgerButtonEl,
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
-  mobileOfferNavItemEl,
-  mobileOfferDropdownEl,
-  offerDropdownEl,
 } from "./components/header.js";
-import {
-  nextSlideButtonEl,
-  scrollToNextSlide,
-  scrollToPreviousSlide,
-  previousSlideButtonEl,
-} from "./components/hero.js";
+import { scrollToNextSlide, scrollToPreviousSlide } from "./components/hero.js";
+import { loadMoreImages } from "./components/realizations.js";
 import debounce from "./helpers/debounce.js";
 
 const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
+
+//initial load of gallery images
+// loadMoreImages();
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
 });
 
 window.addEventListener("mouseover", (event) => {
-  if (event.target === offerNavItemEl || offerNavItemEl.contains(event.target))
+  if (
+    event.target === selectors.header.offerNavItemEl ||
+    selectors.header.offerNavItemEl.contains(event.target)
+  )
     showOfferDropdown();
 });
 
 window.addEventListener("mouseout", (event) => {
-  console.log(event.target);
-
-  if (offerNavItemEl.contains(event.target)) hideOfferDropdown();
+  if (selectors.header.offerNavItemEl.contains(event.target))
+    hideOfferDropdown();
 });
 
 window.addEventListener("click", (event) => {
-  console.log(event.target);
-
   //handle search-icon click when search input is opened
   if (
-    searchButtonEl.contains(event.target) &&
-    !searchInputEl.classList.contains("invisible")
+    selectors.header.searchButtonEl.contains(event.target) &&
+    !selectors.header.searchInputEl.classList.contains("invisible")
   ) {
     hideSearchInput();
 
     //handle search-icon click when search input is closed
   } else if (
-    (searchContainerEl.contains(event.target) &&
-      searchInputEl.classList.contains("invisible")) ||
-    searchContainerEl.contains(event.target)
+    (selectors.header.searchContainerEl.contains(event.target) &&
+      selectors.header.searchInputEl.classList.contains("invisible")) ||
+    selectors.header.searchContainerEl.contains(event.target)
   ) {
     showSearchInput();
 
@@ -65,17 +58,17 @@ window.addEventListener("click", (event) => {
   }
 
   //toggle mobile menu open
-  if (hamburgerButtonEl.contains(event.target)) {
+  if (selectors.header.hamburgerButtonEl.contains(event.target)) {
     toggleMobileMenu();
   }
 
   //handle click on mobile offer nav item when its open
   if (
-    mobileOfferNavItemEl.contains(event.target) &&
-    mobileOfferDropdownEl.classList.contains("flex")
+    selectors.header.mobileOfferNavItemEl.contains(event.target) &&
+    selectors.header.mobileOfferDropdownEl.classList.contains("flex")
   ) {
     hideMobileOfferDropdown();
-  } else if (mobileOfferNavItemEl.contains(event.target)) {
+  } else if (selectors.header.mobileOfferNavItemEl.contains(event.target)) {
     //handle click on mobile offer nav item when its closed
 
     showMobileOfferDropdown();
@@ -85,12 +78,16 @@ window.addEventListener("click", (event) => {
   }
 
   //slider desktop buttons
-  if (previousSlideButtonEl.contains(event.target)) {
+  if (selectors.hero.previousSlideButtonEl.contains(event.target)) {
     scrollToPreviousSlide();
   }
 
-  if (nextSlideButtonEl.contains(event.target)) {
+  if (selectors.hero.nextSlideButtonEl.contains(event.target)) {
     scrollToNextSlide();
+  }
+
+  if (selectors.realizations.showMoreButtonEl.contains(event.target)) {
+    loadMoreImages();
   }
 });
 
