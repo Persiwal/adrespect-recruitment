@@ -1,5 +1,5 @@
 import selectors from "../constants/selectors/selectors.js";
-import { createMacyImgGrid, recalculateMacyImgGrid } from "../lib/macy/macy.js";
+import { createMacyImgGrid } from "../lib/macy/macy.js";
 import allRealizationsGalleryImagesNames from "../constants/allRealizationsGalleryImages.js";
 import { initGallery, refreshGallery } from "../lib/lightgallery/gallery.js";
 
@@ -57,13 +57,13 @@ const addImagesToHtml = () => {
 };
 
 const loadMoreImages = async () => {
-  addImagesToHtml();
+  // addImagesToHtml();
   macyInstance = createMacyImgGrid("#realizations-grid");
   refreshGallery(lightGalleryInstance);
 };
 
 const initRealizationsGrid = () => {
-  addImagesToHtml();
+  // addImagesToHtml();
   macyInstance = createMacyImgGrid("#realizations-grid");
   lightGalleryInstance = initGallery(
     selectors.realizations.realizationsGridContainerEl

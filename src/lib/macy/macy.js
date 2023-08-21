@@ -1,3 +1,5 @@
+import Macy from "macy";
+
 const createMacyImgGrid = (container) => {
   const macyImgGrid = new Macy({
     container: container,

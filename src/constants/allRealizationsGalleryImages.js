@@ -1,23 +1,23 @@
+import img2 from "../../images/img-2.png";
+import img3 from "../../images/img-2.png";
+import img4 from "../../images/img-2.png";
+import img5 from "../../images/img-2.png";
+import img6 from "../../images/img-2.png";
+import img7 from "../../images/img-2.png";
+import img8 from "../../images/img-2.png";
+import img9 from "../../images/img-2.png";
+import img10 from "../../images/img-2.png";
+
 const allRealizationsGalleryImages = [
-  "img-2.png",
-  "img-3.png",
-  "img-4.png",
-  "img-5.png",
-  "img-6.png",
-  "img-7.png",
-  "img-8.png",
-  "img-9.png",
-  "img-10.png",
-  "img-2.png",
-  "img-3.png",
-  "img-4.png",
-  "img-5.png",
-  "img-6.png",
-  "img-7.png",
-  "img-8.png",
-  "img-9.png",
-  "img-10.png",
-  "img-10.png",
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
 ];
 
 export default allRealizationsGalleryImages;

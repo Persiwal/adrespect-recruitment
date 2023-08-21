@@ -1,3 +1,7 @@
+import lightGallery from "lightgallery";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
 const initGallery = (lightgalleryElement) => {
   const lightGalleryInstance = lightGallery(lightgalleryElement, {
     plugins: [lgZoom, lgThumbnail],
