@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css"
+    />
     <link rel="stylesheet" href="/dist/output.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
@@ -12,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="/src/index.js" type="module"></script>
+
     <title>Document</title>
   </head>
   <body class="font-inter">
@@ -159,6 +174,7 @@
                 src="./images/img-1.png"
                 alt=""
                 class="object-cover w-full h-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -166,6 +182,7 @@
                 src="./images/img-2.png"
                 alt=""
                 class="object-cover w-full h-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -173,6 +190,7 @@
                 src="./images/img-3.png"
                 alt=""
                 class="object-cover w-full h-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -180,6 +198,7 @@
                 src="./images/img-4.png"
                 alt=""
                 class="object-cover w-full h-full"
+                loading="lazy"
               />
             </div>
           </div>
@@ -263,6 +282,7 @@
                   src="./images/img-1.png"
                   alt=""
                   class="object-cover w-[100%] h-[100%]"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -270,6 +290,7 @@
                   src="./images/img-2.png"
                   alt=""
                   class="object-cover w-[100%] h-[100%]"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -277,6 +298,7 @@
                   src="./images/img-3.png"
                   alt=""
                   class="object-cover w-[100%] h-[100%]"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -284,6 +306,7 @@
                   src="./images/img-4.png"
                   alt=""
                   class="object-cover w-[100%] h-[100%]"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -320,13 +343,13 @@
         id="offer"
         class="px-4 md:px-6 lg:px-[89px] pt-[120px] pb-[160px] flex flex-col gap-24 bg-[#F5F0EC]"
       >
-        <div class="m-auto max-w-[1040px] text-center md:text-left">
+        <div class="m-auto w-[100%] lg:w-[1040px] text-center lg:text-left">
           <span class="text-xs -tracking-[0.12px]">Oferta</span>
           <h2 class="text-5xl mb-8 mt-4">
             <span class="font-monserrat -tracking-[1.44px]">Działamy</span>
             <span class="font-inter italic">kompleksowo</span>
           </h2>
-          <p class="max-w-[709px] -tracking-[0.16px]">
+          <p class="lg:max-w-[709px] -tracking-[0.16px]">
             Oferujemy kompletną obsługę inwestycji terenów zielonych.
             Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
             Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
@@ -458,7 +481,7 @@
               <span class="font-monserrat -tracking-[1.44px]">Tworzymy z </span>
               <span class="font-inter italic">pasją</span>
             </h2>
-            <p class="-tracking-[0.16px]">
+            <p class="-tracking-[0.16px] max-w-[500px]">
               Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
               wykwalifikowani projektanci oraz architekci, których zadaniem jest
               rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -480,6 +503,43 @@
         </div>
       </section>
       <!-- about section end -->
+
+      <!-- realizations section start -->
+      <section class="relative bg-[#DCC1AB] pt-[120px] pb-11">
+        <div
+          class="px-4 md:px-6 lg:px-[89px] m-auto w-[100%] lg:w-[1040px] text-center lg:text-left"
+        >
+          <span class="text-xs -tracking-[0.12px]">Oferta</span>
+          <h2 class="text-5xl mb-[96px] mt-4">
+            <span class="font-monserrat -tracking-[1.44px]">Nasze</span>
+            <span class="font-inter italic">projekty</span>
+          </h2>
+        </div>
+        <div id="realizations-grid" class="transition-[height] duration-1000">
+          <!-- items generated by JS -->
+        </div>
+        <div
+          class="overlay absolute bottom-0 w-full h-[1044px] bg-gradient-to-t from-[#DCC1AB] to-transparent transition-all"
+          id="realizations-grid-show-more-overlay"
+        ></div>
+        <button
+          class="group absolute bottom-[90px] left-[50%] -translate-x-[50%] flex gap-2 items-center pt-3 pb-[14px] px-[22px] border-[1px] border-black rounded-full"
+          id="realizations-grid-show-more-button"
+        >
+          <span>Rozwiń</span>
+          <img
+            src="./images/hero-arrow-down.svg"
+            alt=""
+            class="group-hover:animate-bounce"
+          />
+        </button>
+      </section>
+      <!-- realizations section end -->
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script src="/src/lib/lightgallery/lightgallery.min.js"></script>
+    <script src="/src/lib/lightgallery/lg-thumbnail.umd.js"></script>
+    <script src="/src/lib/lightgallery/lg-zoom.umd.js"></script>
+    <script src="/src/index.js" type="module"></script>
   </body>
 </html>

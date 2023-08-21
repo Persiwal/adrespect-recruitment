@@ -7,6 +7,9 @@ module.exports = {
         monserrat: ["Montserrat"],
         inter: ["Inter"],
       },
+      transitionProperty: {
+        height: "height",
+      },
       keyframes: {
         slideUp: {
           "0%": {
