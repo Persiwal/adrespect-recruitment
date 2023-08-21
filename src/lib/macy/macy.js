@@ -2,7 +2,7 @@ const createMacyImgGrid = (container) => {
   const macyImgGrid = new Macy({
     container: container,
     mobileFirst: true,
-    columns: 1,
+    columns: 2,
     breakAt: {
       600: 2,
       1024: 3,
