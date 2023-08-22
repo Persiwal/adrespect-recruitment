@@ -60,7 +60,7 @@
         id="mobile-menu"
       >
         <ul
-          class="flex flex-col gap-8 mx-auto child:text-sm child-hover:-translate-y-0.5 child:leading-6 child-hover:border-b-[2px] child:p-4 child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+          class="mx-auto flex flex-col items-center gap-8 child:text-xl child:leading-6 child:p-4 child:cursor-pointer"
         >
           <li class="relative !border-none" id="mobile-offer-nav-item">
             <div class="hover:cursor-pointer flex items-center gap-[5px]">
@@ -68,25 +68,85 @@
               <img src="./assets/arrow-down.svg" alt="rozwiń oferte" />
             </div>
             <ul
-              class="hidden transition-all px-4 py-4 flex-col gap-4 child:text-sm child:px-2 child-hover:-translate-y-0.5 child-hover:border-b-[2px] child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+              class="hidden transition-all px-4 py-8 flex-col gap-8 child:text-base child:px-2 child:cursor-pointer"
               id="mobile-offer-dropdown"
             >
-              <li>
-                <a href="#offer" class="mobile-menu-item">Trawniki</a>
+              <li class="relative">
+                <a
+                  href="#offer"
+                  class="group flex gap-4 relative hover:text-[#1B5B31] mobile-menu-item"
+                  ><img
+                    src="./assets/projects-icon.svg"
+                    alt="ikonka projektu"
+                    class="w-[16px] group-hover:animate-wave"
+                  />
+                  Projekty
+                  <span
+                    class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                  ></span>
+                </a>
               </li>
-              <li>
-                <a href="#offer" class="mobile-menu-item">Kwiaty</a>
+              <li class="relative">
+                <a
+                  href="#offer"
+                  class="group flex gap-4 relative hover:text-[#1B5B31] mobile-menu-item"
+                  ><img
+                    src="./assets/visualizations-icon.svg"
+                    alt="ikonka wizualizacji"
+                    class="w-[16px] group-hover:animate-bounce"
+                  />
+                  Wizualizacje
+                  <span
+                    class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                  ></span>
+                </a>
+              </li>
+              <li class="relative">
+                <a
+                  href="#offer"
+                  class="group flex gap-4 relative hover:text-[#1B5B31] mobile-menu-item"
+                  ><img
+                    src="./assets/realizations-icon.svg"
+                    alt="ikonka realizacji"
+                    class="w-[16px] group-hover:animate-ping"
+                  />
+                  Realizacje
+                  <span
+                    class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                  ></span>
+                </a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#about" class="mobile-menu-item">O firmie</a>
+            <a
+              href="#about"
+              class="group relative hover:text-[#1B5B31] mobile-menu-item"
+              >O firmie
+              <span
+                class="absolute left-0 bottom-[-4px] w-0 group-hover:w-[100%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span>
+            </a>
           </li>
           <li>
-            <a href="#realizations" class="mobile-menu-item">Realizacje</a>
+            <a
+              href="#realizations"
+              class="group relative hover:text-[#1B5B31] mobile-menu-item"
+              >Realizacje
+              <span
+                class="absolute left-0 bottom-[-4px] w-0 group-hover:w-[100%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span>
+            </a>
           </li>
           <li>
-            <a href="#contact" class="mobile-menu-item">Kontakt</a>
+            <a
+              href="#contact"
+              class="group relative hover:text-[#1B5B31] mobile-menu-item"
+              >Kontakt
+              <span
+                class="absolute left-0 bottom-[-4px] w-0 group-hover:w-[100%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span
+            ></a>
           </li>
         </ul>
         <div class="relative mx-auto" id="mobile-search-container">
@@ -111,7 +171,7 @@
       <div class="hidden lg:block">
         <nav class="flex gap-10">
           <ul
-            class="flex gap-10 child-hover:-translate-y-0.5 child:m-auto child:text-sm child-hover:border-b-[2px] child:px-2 child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+            class="flex gap-10 child-hover:-translate-y-0.5 child:m-auto child:text-sm child:px-2 child:transition-all child:cursor-pointer"
           >
             <li class="relative !border-none" id="offer-nav-item">
               <div class="hover:cursor-pointer flex items-center gap-[5px]">
@@ -119,25 +179,81 @@
                 <img src="./assets/arrow-down.svg" alt="rozwiń oferte" />
               </div>
               <ul
-                class="absolute !z-50 top-[100%] invisible transition-all bg-white px-12 py-4 border shadow-lg rounded flex flex-col gap-4 child:text-sm child:px-2 child-hover:-translate-y-0.5 child-hover:border-b-[2px] child-hover:border-b-[#DCC1AB] child:transition-all child:cursor-pointer"
+                class="absolute !z-50 top-[120%] left-[-30%] w-[250px] invisible transition-all bg-white px-12 py-8 border shadow-lg rounded flex flex-col gap-8 child:text-sm child:px-2 child:transition-all child:cursor-pointer"
                 id="offer-dropdown"
               >
                 <li class="relative">
-                  <a href="#offer">Trawniki</a>
+                  <a
+                    href="#offer"
+                    class="group flex gap-4 relative hover:text-[#1B5B31]"
+                    ><img
+                      src="./assets/projects-icon.svg"
+                      alt="ikonka projektu"
+                      class="w-[16px] group-hover:animate-wave"
+                    />
+                    Projekty
+                    <span
+                      class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                    ></span>
+                  </a>
                 </li>
                 <li class="relative">
-                  <a href="#offer">Kwiaty</a>
+                  <a
+                    href="#offer"
+                    class="group flex gap-4 relative hover:text-[#1B5B31]"
+                    ><img
+                      src="./assets/visualizations-icon.svg"
+                      alt="ikonka wizualizacji"
+                      class="w-[16px] group-hover:animate-bounce"
+                    />
+                    Wizualizacje
+                    <span
+                      class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                    ></span>
+                  </a>
+                </li>
+                <li class="relative">
+                  <a
+                    href="#offer"
+                    class="group flex gap-4 relative hover:text-[#1B5B31]"
+                    ><img
+                      src="./assets/realizations-icon.svg"
+                      alt="ikonka realizacji"
+                      class="w-[16px] group-hover:animate-ping"
+                    />
+                    Realizacje
+                    <span
+                      class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                    ></span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#about">O firmie</a>
+              <a href="#about" class="group relative hover:text-[#1B5B31]"
+                >O firmie
+                <span
+                  class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                ></span
+              ></a>
             </li>
             <li>
-              <a href="#realizations">Realizacje</a>
+              <a
+                href="#realizations"
+                class="group relative hover:text-[#1B5B31]"
+                >Realizacje
+                <span
+                  class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                ></span
+              ></a>
             </li>
             <li>
-              <a href="#contact">Kontakt</a>
+              <a href="#contact" class="group relative hover:text-[#1B5B31]"
+                >Kontakt
+                <span
+                  class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+                ></span
+              ></a>
             </li>
           </ul>
           <div class="relative" id="search-container">
@@ -150,7 +266,7 @@
             <button
               aria-label="przycisk szukania"
               id="search-button"
-              class="relative right-2 top-0 cursor-pointer z-10"
+              class="relative right-2 top-0 cursor-pointer z-10 hover:animate-bounce"
             >
               <img src="./assets/search-icon.svg" alt="" />
             </button>
@@ -371,7 +487,7 @@
           </p>
         </div>
         <div
-          class="flex flex-col lg:flex-row gap-16 child:bg-white child:px-10 child:py-12 child:rounded-3xl child:hover:cursor-pointer child:max-w-[522px]"
+          class="flex flex-col xl:flex-row gap-16 child:bg-white child:px-10 child:py-12 child:rounded-3xl child:hover:cursor-pointer child:max-w-[650px]"
         >
           <div class="mx-auto group hover:scale-105 transition-all">
             <img
