@@ -1,0 +1,112 @@
+<!-- hero desktop start -->
+<section class="hidden lg:flex w-full bg-[#DCC1AB]" id="hero">
+  <div
+    class="px-4 md:px-6 lg:px-[89px] w-[50%] flex flex-col justify-center gap-18"
+  >
+    <div class="flex flex-col gap-11 max-w-[550px] xl:ml-auto">
+      <h1
+        class="font-monserrat text-5xl xl:text-6xl font-medium leading:[30px] xl:leading-[70px]"
+      >
+        Nowoczesna aranżacja Twojego ogrodu
+      </h1>
+      <p class="max-w-[440px]">
+        Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+        realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+        podejściem do każdego projektu.
+      </p>
+      <div class="flex flex-col xl:flex-row gap-9 transition-all">
+        <a
+          href="#contact"
+          class="m-auto xl:m-0 text-center w-[80%] xl:w-auto max-w-[255px] px-6 pt-3 pb-[14px] bg-[#1b5b31] rounded-full text-[#F5F0EC] transition-all border-[1px] border-[#1b5b31] hover:bg-transparent hover:text-[#1b5b31]"
+        >
+          Skontaktuj się z nami
+        </a>
+        <a
+          href="#realizations"
+          class="m-auto xl:m-0 text-center group w-[80%] xl:w-auto max-w-[255px] px-6 pt-3 pb-[14px] border-[1px] border-[#1b5b31] rounded-full flex justify-center gap-2 items-center text-[#1b5B31]"
+        >
+          Zobacz nasze realizację
+          <img
+            src="./assets/hero-arrow-down.svg"
+            alt=""
+            class="group-hover:animate-bounce"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="relative w-[50%]">
+    <div id="hero-slider-desktop-container" class="overflow-hidden w-[100%]">
+      <div
+        class="flex w-[100%] child:flex-none child:w-[100%] child:max-h-[633px]"
+        id="hero-slider-desktop"
+      >
+        <div>
+          <img
+            src="./assets/img-1.png"
+            alt=""
+            class="object-cover w-[100%] h-[100%]"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/img-2.png"
+            alt=""
+            class="object-cover w-[100%] h-[100%]"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/img-3.png"
+            alt=""
+            class="object-cover w-[100%] h-[100%]"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/img-4.png"
+            alt=""
+            class="object-cover w-[100%] h-[100%]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- White overlay with opacity 0.1 -->
+    <div
+      class="absolute z-10 top-0 left-0 w-full h-full bg-white bg-opacity-10 group-hover:opacity-0 transition-opacity duration-300"
+    >
+      <!-- slider action buttons -->
+    </div>
+    <div
+      class="absolute z-20 bottom-0 right-0 flex justify-around h-[96px] w-[192px] bg-[#F5F0EC] transition-all"
+    >
+      <button
+        class="flex justify-center items-center w-[50%] group hover:bg-[#1b5b3169]"
+        id="previous-slide-button"
+        aria-label="poprzedni slide"
+      >
+        <img
+          src="./assets/arrow-left.svg"
+          class="group-hover:animate-bounce-left"
+          alt="ikonka strzałki w lewo"
+        />
+      </button>
+      <button
+        class="flex justify-center items-center w-[50%] group hover:bg-[#1b5b3169]"
+        id="next-slide-button"
+        aria-label="następny slide"
+      >
+        <img
+          src="./assets/arrow-right.svg"
+          alt="ikonka strzałki w prawo"
+          class="group-hover:animate-bounce-right"
+        />
+      </button>
+    </div>
+  </div>
+</section>
+<!-- hero desktop end -->

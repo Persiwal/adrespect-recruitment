@@ -1,0 +1,105 @@
+<!-- desktop nav start -->
+<div class="hidden lg:block xl:max-w-[1440px]">
+  <nav class="flex gap-10">
+    <ul
+      class="flex gap-10 child-hover:-translate-y-0.5 child:m-auto child:text-sm child:px-2 child:transition-all child:cursor-pointer"
+    >
+      <li class="relative !border-none" id="offer-nav-item">
+        <div class="hover:cursor-pointer flex items-center gap-[5px]">
+          <span>Oferta</span>
+          <img src="./assets/arrow-down.svg" alt="rozwiń oferte" />
+        </div>
+        <ul
+          class="absolute !z-50 top-[100%] left-[-30%] w-[250px] invisible transition-all bg-white px-12 py-8 border shadow-lg rounded flex flex-col gap-8 child:text-sm child:px-2 child:transition-all child:cursor-pointer"
+          id="offer-dropdown"
+        >
+          <li class="relative">
+            <a
+              href="#offer"
+              class="group flex gap-4 relative hover:text-[#1B5B31]"
+              ><img
+                src="./assets/projects-icon.svg"
+                alt="ikonka projektu"
+                class="w-[16px] group-hover:animate-wave"
+              />
+              Projekty
+              <span
+                class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span>
+            </a>
+          </li>
+          <li class="relative">
+            <a
+              href="#offer"
+              class="group flex gap-4 relative hover:text-[#1B5B31]"
+              ><img
+                src="./assets/visualizations-icon.svg"
+                alt="ikonka wizualizacji"
+                class="w-[16px] group-hover:animate-bounce"
+              />
+              Wizualizacje
+              <span
+                class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span>
+            </a>
+          </li>
+          <li class="relative">
+            <a
+              href="#offer"
+              class="group flex gap-4 relative hover:text-[#1B5B31]"
+              ><img
+                src="./assets/realizations-icon.svg"
+                alt="ikonka realizacji"
+                class="w-[16px] group-hover:animate-ping"
+              />
+              Realizacje
+              <span
+                class="absolute left-[30px] bottom-[-4px] w-0 group-hover:w-[80%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#about" class="group relative hover:text-[#1B5B31]"
+          >O firmie
+          <span
+            class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+          ></span
+        ></a>
+      </li>
+      <li>
+        <a href="#realizations" class="group relative hover:text-[#1B5B31]"
+          >Realizacje
+          <span
+            class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+          ></span
+        ></a>
+      </li>
+      <li>
+        <a href="#contact" class="group relative hover:text-[#1B5B31]"
+          >Kontakt
+          <span
+            class="absolute -left-[10%] bottom-[-4px] w-0 group-hover:w-[120%] h-[1px] bg-[#1B5B31] transition-width duration-300"
+          ></span
+        ></a>
+      </li>
+    </ul>
+    <div class="relative" id="search-container">
+      <input
+        type="text"
+        placeholder="Szukaj..."
+        id="search-input"
+        class="absolute right-0 -top-[30%] w-0 p-2 border border-gray-400 shadow-inner transition-all delay-150 duration-300 overflow-hidden rounded-lg invisible !outline-none"
+      />
+      <button
+        aria-label="przycisk szukania"
+        id="search-button"
+        class="relative right-2 top-0 cursor-pointer z-10 hover:animate-bounce"
+      >
+        <img src="./assets/search-icon.svg" alt="" />
+      </button>
+    </div>
+  </nav>
+</div>
+<!-- desktop nav end -->

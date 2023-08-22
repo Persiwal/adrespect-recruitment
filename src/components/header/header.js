@@ -1,5 +1,5 @@
-import headerSelectors from "../constants/selectors/headerSelectors";
-import selectors from "../constants/selectors/selectors";
+import headerSelectors from "../../constants/selectors/headerSelectors";
+import selectors from "../../constants/selectors/selectors";
 const { bodyEl } = selectors;
 
 let lastScroll = 0;

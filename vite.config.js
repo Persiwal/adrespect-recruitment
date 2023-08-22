@@ -1,6 +1,7 @@
-import { defineConfig, normalizePath } from "vite";
-import path from "path";
+import { defineConfig } from "vite";
+import { resolve } from "path";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
   build: {
@@ -18,6 +19,9 @@ export default defineConfig({
           dest: "",
         },
       ],
+    }),
+    handlebars({
+      partialDirectory: resolve(__dirname, "src/components"),
     }),
   ],
 });
