@@ -109,6 +109,10 @@ const hideMobileOfferDropdown = () => {
   headerSelectors.mobileOfferDropdownEl.classList.add("hidden");
 };
 
+const handleMobileNavItemClick = (target) => {
+  toggleMobileMenu();
+};
+
 export {
   toggleHeaderVisibility,
   hideOfferDropdown,
@@ -118,4 +122,5 @@ export {
   toggleMobileMenu,
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
+  handleMobileNavItemClick,
 };

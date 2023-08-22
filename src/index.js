@@ -10,6 +10,7 @@ import {
   toggleMobileMenu,
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
+  handleMobileNavItemClick,
 } from "./components/header.js";
 import { scrollToNextSlide, scrollToPreviousSlide } from "./components/hero.js";
 import { loadMoreImages } from "./components/realizations.js";
@@ -35,6 +36,8 @@ window.addEventListener("mouseout", (event) => {
 });
 
 window.addEventListener("click", (event) => {
+  console.log(event.target);
+
   //handle search-icon click when search input is opened
   if (
     selectors.header.searchButtonEl.contains(event.target) &&
@@ -86,6 +89,11 @@ window.addEventListener("click", (event) => {
 
   if (selectors.realizations.showMoreButtonEl.contains(event.target)) {
     loadMoreImages();
+  }
+
+  if (event.target.classList.contains("mobile-menu-item")) {
+    console.log(event.target);
+    handleMobileNavItemClick();
   }
 });
 
