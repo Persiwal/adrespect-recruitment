@@ -42,6 +42,17 @@ module.exports = {
             transform: "translateX(0)",
           },
         },
+        bounceLeft: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "60%": {
+            transform: "translateX(-3px)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
         wave: {
           "0%": { transform: "rotate(0.0deg)" },
           "10%": { transform: "rotate(14deg)" },
@@ -56,6 +67,7 @@ module.exports = {
       animation: {
         "slide-up": "slideUp 0.3s ease-out",
         "slide-down-and-dissapear": "slideDownAndDissapear 0.3s ease-out",
+        "bounce-left": "bounceLeft 1s ease-in-out infinite",
         "bounce-right": "bounceRight 1s ease-in-out infinite",
         wave: "wave 2s linear infinite",
       },

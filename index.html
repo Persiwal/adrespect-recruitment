@@ -201,34 +201,36 @@
               />
             </div>
           </div>
-        </div>
-        <div
-          class="absolute z-1 top-0 left-0 h-[80vh] flex flex-col justify-center gap-8 bg-gradient-to-b from-green-500 to-white/30 w-full items-center px-12 md:px-12 py-10"
-        >
-          <h1 class="font-monserrat text-5xl md:text-6xl text-center">
-            Nowoczesna aranżacja Twojego ogrodu
-          </h1>
-          <p class="p-3 text-center">
-            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-            podejściem do każdego projektu.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-9">
-            <button
-              class="px-6 pt-3 pb-[14px] bg-[#1b5b31] rounded-full text-[#F5F0EC] transition-all border-[1px] border-[#1b5b31]"
-            >
-              Skontaktuj się z nami
-            </button>
-            <button
-              class="group px-6 pt-3 pb-[14px] border-[1px] border-[#1b5b31] rounded-full flex gap-2 items-center text-[#1b5B31]"
-            >
-              Zobacz nasze realizację
-              <img
-                src="./assets/hero-arrow-down.svg"
-                alt=""
-                class="group-hover:animate-bounce"
-              />
-            </button>
+          <div
+            class="absolute z-1 top-0 sm:top-10 left-[50%] -translate-x-[50%] h-[100%] sm:h-[80%] w-[100%] sm:w-[80%] flex flex-col justify-center gap-8 bg-[#DCC1AB] bg-opacity-90 items-center px-12 md:px-12 py-10"
+          >
+            <h1 class="font-monserrat text-5xl md:text-6xl text-center">
+              Nowoczesna aranżacja Twojego ogrodu
+            </h1>
+            <p class="p-3 text-center">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div class="flex flex-col gap-9">
+              <a
+                href="#contact"
+                class="m-auto w-[100%] px-6 pt-3 pb-[14px] bg-[#1b5b31] rounded-full text-[#F5F0EC] text-center transition-all border-[1px] border-[#1b5b31]"
+              >
+                Skontaktuj się z nami
+              </a>
+              <a
+                href="#realizations"
+                class="m-auto w-[100%] group px-6 pt-3 pb-[14px] border-[1px] border-[#1b5b31] rounded-full flex gap-2 items-center text-[#1b5B31]"
+              >
+                Zobacz nasze realizację
+                <img
+                  src="./assets/hero-arrow-down.svg"
+                  alt=""
+                  class="group-hover:animate-bounce"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -240,7 +242,9 @@
           class="px-4 md:px-6 lg:px-[89px] w-[50%] flex flex-col justify-center gap-18"
         >
           <div class="flex flex-col gap-11">
-            <h1 class="font-monserrat text-6xl font-medium leading-[70px]">
+            <h1
+              class="font-monserrat text-5xl xl:text-6xl font-medium leading:[30px] xl:leading-[70px]"
+            >
               Nowoczesna aranżacja Twojego ogrodu
             </h1>
             <p class="max-w-[440px]">
@@ -248,14 +252,16 @@
               realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
               podejściem do każdego projektu.
             </p>
-            <div class="flex gap-9">
-              <button
-                class="px-6 pt-3 pb-[14px] bg-[#1b5b31] rounded-full text-[#F5F0EC] transition-all border-[1px] border-[#1b5b31] hover:bg-transparent hover:text-[#1b5b31]"
+            <div class="flex flex-col xl:flex-row gap-9 transition-all">
+              <a
+                href="#contact"
+                class="m-auto xl:m-0 text-center w-[80%] xl:w-auto max-w-[255px] px-6 pt-3 pb-[14px] bg-[#1b5b31] rounded-full text-[#F5F0EC] transition-all border-[1px] border-[#1b5b31] hover:bg-transparent hover:text-[#1b5b31]"
               >
                 Skontaktuj się z nami
-              </button>
-              <button
-                class="group px-6 pt-3 pb-[14px] border-[1px] border-[#1b5b31] rounded-full flex gap-2 items-center text-[#1b5B31]"
+              </a>
+              <a
+                href="#realizations"
+                class="m-auto xl:m-0 text-center group w-[80%] xl:w-auto max-w-[255px] px-6 pt-3 pb-[14px] border-[1px] border-[#1b5b31] rounded-full flex justify-center gap-2 items-center text-[#1b5B31]"
               >
                 Zobacz nasze realizację
                 <img
@@ -263,7 +269,7 @@
                   alt=""
                   class="group-hover:animate-bounce"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -317,19 +323,28 @@
             <!-- slider action buttons -->
           </div>
           <div
-            class="absolute z-20 bottom-0 right-0 flex gap-8 px-8 py-6 bg-white"
+            class="absolute z-20 bottom-0 right-0 flex justify-around h-[96px] w-[192px] bg-[#F5F0EC] transition-all"
           >
-            <button id="previous-slide-button" aria-label="poprzedni slide">
+            <button
+              class="flex justify-center items-center w-[50%] group hover:bg-[#1b5b3169]"
+              id="previous-slide-button"
+              aria-label="poprzedni slide"
+            >
               <img
-                src="./assets/arrow-right.svg"
-                class="rotate-180"
+                src="./assets/arrow-left.svg"
+                class="group-hover:animate-bounce-left"
                 alt="ikonka strzałki w lewo"
               />
             </button>
-            <button id="next-slide-button" aria-label="następny slide">
+            <button
+              class="flex justify-center items-center w-[50%] group hover:bg-[#1b5b3169]"
+              id="next-slide-button"
+              aria-label="następny slide"
+            >
               <img
                 src="./assets/arrow-right.svg"
                 alt="ikonka strzałki w prawo"
+                class="group-hover:animate-bounce-right"
               />
             </button>
           </div>
