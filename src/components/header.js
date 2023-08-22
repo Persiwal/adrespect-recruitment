@@ -7,16 +7,7 @@ let lastScroll = 0;
 const toggleHeaderVisibility = () => {
   const currentScroll = window.scrollY;
 
-  //Check if header is at the top of the page
-  if (currentScroll > 70) {
-    headerSelectors.headerEl.classList.add("fixed");
-    headerSelectors.headerEl.classList.remove("relative");
-  } else {
-    headerSelectors.headerEl.classList.add("relative");
-    headerSelectors.headerEl.classList.remove("fixed");
-  }
-
-  if (currentScroll > lastScroll) {
+  if (currentScroll > lastScroll && currentScroll > 70) {
     // Scroll down
     headerSelectors.headerEl.classList.add(`-translate-y-full`);
   } else {
