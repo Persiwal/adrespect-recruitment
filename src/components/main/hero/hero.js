@@ -1,4 +1,4 @@
-import heroSelectors from "../constants/selectors/heroSelectors";
+import heroSelectors from "../../../constants/selectors/heroSelectors";
 
 const desktopBreakpoint = 1024;
 let currentIndex = 0;

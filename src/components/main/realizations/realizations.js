@@ -1,7 +1,10 @@
-import selectors from "../constants/selectors/selectors.js";
-import { createMacyImgGrid } from "../lib/macy/macy.js";
-import allRealizationsGalleryImagesNames from "../constants/allRealizationsGalleryImages.js";
-import { initGallery, refreshGallery } from "../lib/lightgallery/gallery.js";
+import selectors from "../../../constants/selectors/selectors.js";
+import { createMacyImgGrid } from "../../../lib/macy/macy.js";
+import allRealizationsGalleryImagesNames from "../../../constants/allRealizationsGalleryImages.js";
+import {
+  initGallery,
+  refreshGallery,
+} from "../../../lib/lightgallery/gallery.js";
 
 let macyInstance = null;
 let lightGalleryInstance = null;
