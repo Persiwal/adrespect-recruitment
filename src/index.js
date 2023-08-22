@@ -1,6 +1,6 @@
 import "./index.css";
 import selectors from "./constants/selectors/selectors.js";
-import "./components/realizations.js";
+import "./components/main/realizations/realizations.js";
 import {
   toggleHeaderVisibility,
   showOfferDropdown,
@@ -11,9 +11,12 @@ import {
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
   handleMobileNavItemClick,
-} from "./components/header.js";
-import { scrollToNextSlide, scrollToPreviousSlide } from "./components/hero.js";
-import { loadMoreImages } from "./components/realizations.js";
+} from "./components/header/header.js";
+import {
+  scrollToNextSlide,
+  scrollToPreviousSlide,
+} from "./components/main/hero/hero.js";
+import { loadMoreImages } from "./components/main/realizations/realizations.js";
 import debounce from "./helpers/debounce.js";
 
 const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
@@ -36,8 +39,6 @@ window.addEventListener("mouseout", (event) => {
 });
 
 window.addEventListener("click", (event) => {
-  console.log(event.target);
-
   //handle search-icon click when search input is opened
   if (
     selectors.header.searchButtonEl.contains(event.target) &&
@@ -92,7 +93,6 @@ window.addEventListener("click", (event) => {
   }
 
   if (event.target.classList.contains("mobile-menu-item")) {
-    console.log(event.target);
     handleMobileNavItemClick();
   }
 });
