@@ -11,8 +11,10 @@ import {
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
   handleMobileNavItemClick,
+  closeMobileMenu,
 } from "./components/header/header.js";
 import {
+  resetSliderInterval,
   scrollToNextSlide,
   scrollToPreviousSlide,
 } from "./components/main/hero/hero.js";
@@ -23,6 +25,12 @@ const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1024) {
+    closeMobileMenu();
+  }
 });
 
 window.addEventListener("mouseover", (event) => {
@@ -81,10 +89,12 @@ window.addEventListener("click", (event) => {
 
   //slider desktop buttons
   if (selectors.hero.previousSlideButtonEl.contains(event.target)) {
+    resetSliderInterval();
     scrollToPreviousSlide();
   }
 
   if (selectors.hero.nextSlideButtonEl.contains(event.target)) {
+    resetSliderInterval();
     scrollToNextSlide();
   }
 
@@ -96,6 +106,3 @@ window.addEventListener("click", (event) => {
     handleMobileNavItemClick();
   }
 });
-
-//auto scroll hero slider every 3 secs
-setInterval(scrollToNextSlide, 3000);
