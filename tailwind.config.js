@@ -63,6 +63,16 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        fadeIn: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-20px) translateY(-20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0) translateY(0)",
+          },
+        },
       },
       animation: {
         "slide-up": "slideUp 0.3s ease-out",
