@@ -48,26 +48,30 @@ const hideSearchInput = () => {
   headerSelectors.searchInputEl.classList.add("invisible");
 };
 
+const closeMobileMenu = () => {
+  //handle close
+  headerSelectors.mobileMenuEl.classList.remove("open");
+  headerSelectors.mobileMenuEl.classList.add("-translate-x-[100%]");
+
+  headerSelectors.hamburgerLineOneEl.classList.remove(
+    "rotate-45",
+    "translate-x-[2px]",
+    "-translate-y-[4px]"
+  );
+  headerSelectors.hamburgerLineTwoEl.classList.remove("!hidden");
+  headerSelectors.hamburgerLineThreeEl.classList.remove(
+    "-rotate-45",
+    "translate-x-[2px]",
+    "translate-y-[7px]"
+  );
+
+  //enable scrolling
+  bodyEl.classList.remove("overflow-hidden");
+};
+
 const toggleMobileMenu = () => {
   if (headerSelectors.mobileMenuEl.classList.contains("open")) {
-    //handle close
-    headerSelectors.mobileMenuEl.classList.remove("open");
-    headerSelectors.mobileMenuEl.classList.add("-translate-x-[100%]");
-
-    headerSelectors.hamburgerLineOneEl.classList.remove(
-      "rotate-45",
-      "translate-x-[2px]",
-      "-translate-y-[4px]"
-    );
-    headerSelectors.hamburgerLineTwoEl.classList.remove("!hidden");
-    headerSelectors.hamburgerLineThreeEl.classList.remove(
-      "-rotate-45",
-      "translate-x-[2px]",
-      "translate-y-[7px]"
-    );
-
-    //enable scrolling
-    bodyEl.classList.remove("overflow-hidden");
+    closeMobileMenu();
   } else {
     //handle open
     headerSelectors.mobileMenuEl.classList.add("open");
@@ -114,4 +118,5 @@ export {
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
   handleMobileNavItemClick,
+  closeMobileMenu,
 };

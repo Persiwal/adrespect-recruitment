@@ -11,6 +11,7 @@ import {
   hideMobileOfferDropdown,
   showMobileOfferDropdown,
   handleMobileNavItemClick,
+  closeMobileMenu,
 } from "./components/header/header.js";
 import {
   resetSliderInterval,
@@ -24,6 +25,12 @@ const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1024) {
+    closeMobileMenu();
+  }
 });
 
 window.addEventListener("mouseover", (event) => {
