@@ -8,6 +8,8 @@ const desktopSliderContainerEl = document.getElementById(
 const desktopSliderEl = document.getElementById("hero-slider-desktop");
 const previousSlideButtonEl = document.getElementById("previous-slide-button");
 const nextSlideButtonEl = document.getElementById("next-slide-button");
+const nextSlideButtonArrowEl = nextSlideButtonEl.querySelector("img");
+const previousSlideButtonArrowEl = previousSlideButtonEl.querySelector("img");
 
 const heroSelectors = {
   mobileSliderContainerEl,
@@ -16,6 +18,8 @@ const heroSelectors = {
   desktopSliderEl,
   previousSlideButtonEl,
   nextSlideButtonEl,
+  nextSlideButtonArrowEl,
+  previousSlideButtonArrowEl,
 };
 
 export default heroSelectors;

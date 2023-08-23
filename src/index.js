@@ -13,6 +13,7 @@ import {
   handleMobileNavItemClick,
 } from "./components/header/header.js";
 import {
+  resetSliderInterval,
   scrollToNextSlide,
   scrollToPreviousSlide,
 } from "./components/main/hero/hero.js";
@@ -81,10 +82,12 @@ window.addEventListener("click", (event) => {
 
   //slider desktop buttons
   if (selectors.hero.previousSlideButtonEl.contains(event.target)) {
+    resetSliderInterval();
     scrollToPreviousSlide();
   }
 
   if (selectors.hero.nextSlideButtonEl.contains(event.target)) {
+    resetSliderInterval();
     scrollToNextSlide();
   }
 
@@ -96,6 +99,3 @@ window.addEventListener("click", (event) => {
     handleMobileNavItemClick();
   }
 });
-
-//auto scroll hero slider every 3 secs
-setInterval(scrollToNextSlide, 3000);
