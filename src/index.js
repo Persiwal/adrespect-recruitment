@@ -20,11 +20,13 @@ import {
 } from "./components/main/hero/hero.js";
 import { loadMoreImages } from "./components/main/realizations/realizations.js";
 import debounce from "./helpers/debounce.js";
+import { calculateScaleEffectForAboutImg } from "./components/main/about/about";
 
 const debouncedToggleHeaderVisibility = debounce(toggleHeaderVisibility, 10);
 
 window.addEventListener("scroll", () => {
   debouncedToggleHeaderVisibility();
+  calculateScaleEffectForAboutImg();
 });
 
 window.addEventListener("resize", () => {
