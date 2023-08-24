@@ -3,6 +3,15 @@ module.exports = {
   content: ["./*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
     extend: {
+      colors: {
+        custom: {
+          grey: "#F5F0EC",
+          green: "#1B5B31",
+          beige: "#DCC1AB",
+          black: "#000000",
+          white: "#FFFFFF",
+        },
+      },
       fontFamily: {
         monserrat: ["Montserrat"],
         inter: ["Inter"],
